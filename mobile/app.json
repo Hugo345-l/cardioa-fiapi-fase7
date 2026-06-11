@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "CardioIA",
+    "slug": "cardioai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "br.com.cardioai.app"
+    },
+    "android": {
+      "package": "br.com.cardioai.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0f172a",
+        "foregroundImage": "./assets/adaptive-icon.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

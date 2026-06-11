@@ -1,0 +1,32 @@
+{
+  "alto_risco": [
+    "Encaminhamento imediato à cardiologia (urgência em até 24h)",
+    "Realização de ECG (eletrocardiograma) de urgência",
+    "Monitoramento contínuo da pressão arterial (PA a cada 2h)",
+    "Avaliação de biomarcadores cardíacos (troponina, BNP)",
+    "Restrição de atividades físicas até avaliação especializada",
+    "Iniciar ou revisar terapia anti-hipertensiva conforme protocolo médico",
+    "Orientação nutricional urgente: dieta hipossódica e hipolipídica",
+    "Retorno ambulatorial em até 7 dias após avaliação inicial"
+  ],
+  "medio_risco": [
+    "Consulta ambulatorial com cardiologista em até 30 dias",
+    "Monitoramento pressórico domiciliar diário (MAPA se necessário)",
+    "Solicitação de exames laboratoriais: perfil lipídico, glicemia, creatinina",
+    "Avaliação de fatores de risco modificáveis (tabagismo, sedentarismo, obesidade)",
+    "Orientação para atividade física moderada (caminhada 30min, 5x/semana)",
+    "Revisão de medicações em uso e adesão ao tratamento",
+    "Orientação nutricional: redução de sódio e gorduras saturadas",
+    "Reavaliação de risco em 3 a 6 meses"
+  ],
+  "baixo_risco": [
+    "Orientações preventivas gerais sobre hábitos de vida saudável",
+    "Reavaliação ambulatorial anual de rotina",
+    "Manutenção de atividade física regular (mínimo 150min/semana de atividade moderada)",
+    "Dieta equilibrada com ingestão adequada de frutas, verduras e grãos",
+    "Manutenção de peso corporal saudável (IMC entre 18,5 e 24,9)",
+    "Cessação do tabagismo (se aplicável)",
+    "Moderação no consumo de álcool",
+    "Controle periódico de pressão arterial (a cada 6 a 12 meses)"
+  ]
+}
