@@ -14,11 +14,16 @@
       "package": "br.com.cardioai.app",
       "adaptiveIcon": {
         "backgroundColor": "#0f172a",
-        "foregroundImage": "./assets/adaptive-icon.png"
+        "foregroundImage": "./assets/android-icon-foreground.png"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d7deb338-5e4f-4031-b3c1-308395bf5d17"
+      }
     }
   }
 }
