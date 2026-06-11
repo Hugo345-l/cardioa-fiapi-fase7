@@ -31,8 +31,6 @@ A plataforma permite que um profissional de saúde:
 - **Consulte** um assistente conversacional especializado em cardiologia (LLM)
 - **Receba** dados de sensores IoT simulados em MicroPython (ESP32)
 
-> 🎥 **Vídeo demonstrativo:** _(link a ser adicionado após gravação)_
-
 ---
 
 ## 🔗 Links de Entrega
@@ -43,7 +41,6 @@ A plataforma permite que um profissional de saúde:
 | ⚙️ API Backend (Render) | https://cardioai-backend-6ppy.onrender.com |
 | 📱 Build Mobile (.apk via EAS) | https://expo.dev/accounts/hugo_mariano/projects/cardioai/builds/94eac4ec-bae8-44de-8edb-0f5d29aa3694 |
 | 🔌 Simulação IoT (Wokwi MicroPython) | https://wokwi.com/projects/466498872535316481 |
-| 🎬 Vídeo Demonstrativo (até 5 min) | _a preencher_ |
 
 ---
 
@@ -172,12 +169,6 @@ eas build --platform android --profile preview
 2. No Android, habilite **Configurações → Segurança → Instalar apps de fontes desconhecidas**
 3. Abra o `.apk` baixado e confirme a instalação
 4. Faça login e visualize os dados cardíacos
-
----
-
-## 📸 Prints Comprobatórios
-
-> _Imagens do deploy concluído (Vercel e Render) e do app instalado serão adicionadas aqui._
 
 ---
 
