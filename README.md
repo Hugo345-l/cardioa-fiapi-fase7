@@ -42,7 +42,7 @@ A plataforma permite que um profissional de saúde:
 | 🌐 Aplicação Web (Vercel) | https://cardioa-fiapi-fase7.vercel.app |
 | ⚙️ API Backend (Render) | https://cardioai-backend-6ppy.onrender.com |
 | 📱 Build Mobile (.apk via EAS) | https://expo.dev/accounts/hugo_mariano/projects/cardioai/builds/94eac4ec-bae8-44de-8edb-0f5d29aa3694 |
-| 🔌 Simulação IoT (Wokwi MicroPython) | _a preencher_ |
+| 🔌 Simulação IoT (Wokwi MicroPython) | https://wokwi.com/projects/466498872535316481 |
 | 🎬 Vídeo Demonstrativo (até 5 min) | _a preencher_ |
 
 ---

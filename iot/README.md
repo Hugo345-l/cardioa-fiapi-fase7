@@ -1,5 +1,7 @@
 # CardioIA – IoT MicroPython (ESP32)
 
+> 🔗 **Simulação pública no Wokwi:** https://wokwi.com/projects/466498872535316481
+
 ## Como simular no Wokwi
 
 1. Acesse [wokwi.com](https://wokwi.com) e crie um novo projeto **MicroPython (ESP32)**
