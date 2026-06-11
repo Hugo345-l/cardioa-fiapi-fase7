@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #1e293b; font-size: 10.5pt; line-height: 1.5; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  h1 { font-size: 20pt; color: #b91c1c; margin-bottom: 2px; }
+  h2 { font-size: 13pt; color: #b91c1c; border-bottom: 2px solid #fca5a5; padding-bottom: 3px; margin: 16px 0 8px; }
+  h3 { font-size: 11pt; color: #0f172a; margin: 10px 0 4px; }
+  p { margin-bottom: 6px; text-align: justify; }
+  ul { margin: 4px 0 8px 18px; }
+  li { margin-bottom: 3px; }
+  strong { color: #0f172a; }
+  code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-family: 'Consolas', monospace; font-size: 9pt; color: #b91c1c; }
+
+  .cover-head { text-align: center; border-bottom: 3px solid #b91c1c; padding-bottom: 14px; margin-bottom: 16px; }
+  .cover-head img { width: 150px; margin-bottom: 10px; }
+  .subtitle { font-size: 12pt; color: #475569; font-weight: 600; }
+  .meta { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px; margin: 14px 0; }
+  .meta-row { display: flex; margin-bottom: 4px; }
+  .meta-label { font-weight: 700; color: #b91c1c; width: 130px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 9.5pt; }
+  th { background: #b91c1c; color: #fff; padding: 6px 8px; text-align: left; }
+  td { border: 1px solid #e2e8f0; padding: 5px 8px; }
+  tr:nth-child(even) td { background: #f8fafc; }
+
+  .box-note { background: #fef2f2; border-left: 4px solid #b91c1c; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; }
+  .footer { text-align: center; font-size: 8pt; color: #94a3b8; margin-top: 14px; border-top: 1px solid #e2e8f0; padding-top: 6px; }
+  .two-col { display: flex; gap: 16px; }
+  .two-col > div { flex: 1; }
+  .tag { display: inline-block; background: #fee2e2; color: #b91c1c; font-size: 8pt; font-weight: 700; padding: 1px 8px; border-radius: 10px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ PÁGINA 1 — CAPA / VISÃO GERAL ═══════════ -->
+<div class="page">
+  <div class="cover-head">
+    <img src="LOGO_PLACEHOLDER" alt="FIAP">
+    <h1>CardioIA — Fase 7</h1>
+    <div class="subtitle">Plataforma de Inteligência Cardíaca Total</div>
+  </div>
+
+  <div class="meta">
+    <div class="meta-row"><span class="meta-label">Instituição</span><span>FIAP — Faculdade de Informática e Administração Paulista</span></div>
+    <div class="meta-row"><span class="meta-label">Disciplina</span><span>ITIAOR2 — Inteligência Artificial</span></div>
+    <div class="meta-row"><span class="meta-label">Integrantes</span><span>Bruno Castro (RM558359) · Hugo Mariano (RM560688) · Matheus Castro (RM559293)</span></div>
+    <div class="meta-row"><span class="meta-label">Repositório</span><span>github.com/Hugo345-l/cardioa-fiapi-fase7</span></div>
+  </div>
+
+  <h2>1. Visão Geral</h2>
+  <p>A <strong>Fase 7</strong> consolida a jornada da CardioIA — coleta de dados (Fase 1), diagnóstico automatizado (Fase 2), monitoramento IoT (Fase 3), análise de imagens (Fase 4), assistência conversacional (Fase 5) e orquestração preditiva multiagente (Fase 6) — em um <strong>produto digital funcional, seguro e centrado no usuário</strong>.</p>
+  <p>Se a Fase 6 entregou o <em>"Cérebro"</em> da solução (previsão de risco cardiovascular), a Fase 7 materializa o <em>"Corpo"</em>: a interface que conecta médico e paciente aos insights de Inteligência Artificial em tempo real, integrando back-end, front-end, mobile, LLMs e sensores em uma única arquitetura orquestrada por Python.</p>
+
+  <h2>2. Objetivo</h2>
+  <p>Desenvolver o MVP final e funcional da plataforma CardioIA, capaz de:</p>
+  <ul>
+    <li>Realizar o <strong>deploy completo</strong>: Web (Vercel, com CI/CD ativo) e Mobile (<code>.apk</code> via Expo EAS Build);</li>
+    <li><strong>Integrar</strong> os módulos das fases anteriores num back-end Python único (modelo preditivo da Fase 6 e LLM da Fase 5);</li>
+    <li><strong>Refinar a Experiência do Usuário</strong>, com foco no fluxo de informação dos indicadores de risco;</li>
+    <li><strong>Evoluir o hardware</strong>, migrando a lógica de sensores de C/C++ para MicroPython (ESP32).</li>
+  </ul>
+
+  <h2>3. Funcionalidades da Plataforma</h2>
+  <p>O profissional de saúde, através da aplicação Web ou Mobile, pode:</p>
+  <ul>
+    <li><strong>Monitorar</strong> sinais vitais em tempo real (batimentos, temperatura, SpO₂) no dashboard;</li>
+    <li><strong>Analisar</strong> o risco cardiovascular de um paciente a partir de 11 variáveis clínicas, com classificação em Alto / Médio / Baixo risco e protocolos clínicos sugeridos;</li>
+    <li><strong>Consultar</strong> um assistente conversacional especializado em cardiologia, alimentado por LLM;</li>
+    <li><strong>Receber</strong> dados de sensores IoT simulados em MicroPython.</li>
+  </ul>
+
+  <div class="footer">CardioIA Fase 7 · Relatório Técnico · Página 1 de 5</div>
+</div>
+
+<!-- ═══════════ PÁGINA 2 — ARQUITETURA FINAL ═══════════ -->
+<div class="page">
+  <h2>4. Arquitetura Final da Solução</h2>
+  <p>O fluxo de dados percorre quatro camadas, do sensor físico até a interface do usuário, orquestradas pelo back-end Python:</p>
+
+  <svg viewBox="0 0 780 300" xmlns="http://www.w3.org/2000/svg" style="width:100%; margin:10px 0;">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+      </marker>
+    </defs>
+
+    <!-- Camada 1: Hardware -->
+    <rect x="10" y="60" width="150" height="180" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="85" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">HARDWARE</text>
+    <text x="85" y="100" text-anchor="middle" font-size="10" fill="#92400e">ESP32 · MicroPython</text>
+    <line x1="25" y1="110" x2="145" y2="110" stroke="#d97706" stroke-width="1" stroke-dasharray="2"/>
+    <text x="85" y="130" text-anchor="middle" font-size="9" fill="#78350f">DHT22 (temp/umid)</text>
+    <text x="85" y="148" text-anchor="middle" font-size="9" fill="#78350f">Push Button (BPM)</text>
+    <text x="85" y="166" text-anchor="middle" font-size="9" fill="#78350f">LED (alerta visual)</text>
+    <text x="85" y="190" text-anchor="middle" font-size="9" fill="#78350f">Buffer offline (100)</text>
+    <text x="85" y="220" text-anchor="middle" font-size="8" fill="#a16207" font-style="italic">Simulação: Wokwi</text>
+
+    <!-- Camada 2: Backend -->
+    <rect x="215" y="60" width="155" height="180" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="292" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">BACKEND PYTHON</text>
+    <text x="292" y="100" text-anchor="middle" font-size="10" fill="#1e40af">FastAPI · Render</text>
+    <line x1="230" y1="110" x2="355" y2="110" stroke="#2563eb" stroke-width="1" stroke-dasharray="2"/>
+    <text x="292" y="132" text-anchor="middle" font-size="9" fill="#1e3a8a">POST /analyze</text>
+    <text x="292" y="152" text-anchor="middle" font-size="9" fill="#1e3a8a">POST /chat</text>
+    <text x="292" y="172" text-anchor="middle" font-size="9" fill="#1e3a8a">GET /health</text>
+    <text x="292" y="200" text-anchor="middle" font-size="8" fill="#3b82f6" font-style="italic">Orquestrador central</text>
+
+    <!-- Camada 3: IA -->
+    <rect x="425" y="60" width="150" height="180" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="500" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">MOTORES DE IA</text>
+    <line x1="440" y1="95" x2="560" y2="95" stroke="#16a34a" stroke-width="1" stroke-dasharray="2"/>
+    <text x="500" y="118" text-anchor="middle" font-size="9" font-weight="bold" fill="#14532d">Random Forest</text>
+    <text x="500" y="133" text-anchor="middle" font-size="8" fill="#166534">modelo_cardio.pkl</text>
+    <text x="500" y="147" text-anchor="middle" font-size="8" fill="#166534">(Fase 6)</text>
+    <line x1="455" y1="160" x2="545" y2="160" stroke="#86efac" stroke-width="1"/>
+    <text x="500" y="180" text-anchor="middle" font-size="9" font-weight="bold" fill="#14532d">LLM · OpenRouter</text>
+    <text x="500" y="195" text-anchor="middle" font-size="8" fill="#166534">GPT-4o-mini</text>
+    <text x="500" y="209" text-anchor="middle" font-size="8" fill="#166534">(Fase 5)</text>
+
+    <!-- Camada 4: UI -->
+    <rect x="630" y="60" width="140" height="180" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+    <text x="700" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#be185d">INTERFACES</text>
+    <line x1="645" y1="95" x2="755" y2="95" stroke="#db2777" stroke-width="1" stroke-dasharray="2"/>
+    <text x="700" y="118" text-anchor="middle" font-size="9" font-weight="bold" fill="#831843">Web</text>
+    <text x="700" y="133" text-anchor="middle" font-size="8" fill="#9d174d">React + Vite</text>
+    <text x="700" y="147" text-anchor="middle" font-size="8" fill="#9d174d">deploy: Vercel</text>
+    <line x1="660" y1="160" x2="740" y2="160" stroke="#f9a8d4" stroke-width="1"/>
+    <text x="700" y="180" text-anchor="middle" font-size="9" font-weight="bold" fill="#831843">Mobile</text>
+    <text x="700" y="195" text-anchor="middle" font-size="8" fill="#9d174d">React Native</text>
+    <text x="700" y="209" text-anchor="middle" font-size="8" fill="#9d174d">.apk via EAS</text>
+
+    <!-- Setas -->
+    <line x1="162" y1="150" x2="211" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="372" y1="150" x2="421" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="577" y1="150" x2="626" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="186" y="143" text-anchor="middle" font-size="7" fill="#475569">MQTT/HTTP</text>
+    <text x="396" y="143" text-anchor="middle" font-size="7" fill="#475569">invoca</text>
+    <text x="601" y="143" text-anchor="middle" font-size="7" fill="#475569">REST/JSON</text>
+
+    <!-- Título inferior do fluxo -->
+    <text x="390" y="275" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155">Sensor → MicroPython → Backend Python → APIs de IA → UI</text>
+  </svg>
+
+  <h3>4.1. Descrição do Fluxo</h3>
+  <ul>
+    <li><strong>Hardware (Edge):</strong> o ESP32, programado em MicroPython, lê temperatura/umidade (DHT22) e simula batimentos (push button), acendendo um LED em condições críticas. Um buffer circular garante resiliência offline.</li>
+    <li><strong>Backend Python (Orquestrador):</strong> o serviço FastAPI recebe os sinais e expõe endpoints que acionam os motores de IA. É o ponto único de integração entre interfaces e modelos.</li>
+    <li><strong>Motores de IA:</strong> o endpoint <code>/analyze</code> carrega o modelo Random Forest treinado na Fase 6; o <code>/chat</code> consome o LLM via OpenRouter, herdando a assistência conversacional da Fase 5.</li>
+    <li><strong>Interfaces (UI):</strong> as aplicações Web (Vercel) e Mobile (APK) consomem a API via REST, entregando os insights ao usuário final.</li>
+  </ul>
+
+  <div class="box-note"><strong>Decisão de arquitetura:</strong> o back-end Python centraliza toda a lógica de IA, mantendo as interfaces "magras". Isso permite que Web e Mobile compartilhem exatamente a mesma fonte de verdade e que o modelo seja atualizado sem alterar os clientes.</div>
+
+  <div class="footer">CardioIA Fase 7 · Relatório Técnico · Página 2 de 5</div>
+</div>
+
+<!-- ═══════════ PÁGINA 3 — BACKEND & IA ═══════════ -->
+<div class="page">
+  <h2>5. Back-end Integrador e Motores de IA</h2>
+  <p>O núcleo da solução é um serviço <strong>FastAPI</strong> (Python 3.12) que unifica as interfaces aos motores de IA das fases anteriores. Está hospedado no <strong>Render.com</strong>, com deploy automático via <code>render.yaml</code> (Blueprint).</p>
+
+  <h3>5.1. Endpoints da API</h3>
+  <table>
+    <tr><th>Método / Rota</th><th>Função</th><th>Origem</th></tr>
+    <tr><td><code>GET /health</code></td><td>Verifica status da API e carregamento do modelo</td><td>—</td></tr>
+    <tr><td><code>POST /analyze</code></td><td>Recebe 11 variáveis clínicas, retorna probabilidade, classificação de risco e protocolos</td><td>Fase 6</td></tr>
+    <tr><td><code>POST /chat</code></td><td>Recebe mensagem do usuário, retorna resposta cardiológica do LLM</td><td>Fase 5</td></tr>
+  </table>
+
+  <h3>5.2. Integração do Modelo Preditivo (Fase 6)</h3>
+  <p>O endpoint <code>/analyze</code> carrega o artefato <code>modelo_cardio.pkl</code> — um <strong>Random Forest Classifier</strong> treinado na Fase 6 sobre ~70.000 registros do dataset <em>Cardiovascular Disease</em> (Kaggle). As 11 features (idade, sexo, altura, peso, pressões sistólica/diastólica, colesterol, glicose, tabagismo, álcool, atividade física) são montadas num <code>DataFrame</code> e submetidas a <code>predict_proba()</code>. A faixa de risco é derivada da probabilidade:</p>
+  <table>
+    <tr><th>Probabilidade</th><th>Classificação</th><th>Conduta</th></tr>
+    <tr><td>≥ 0,70</td><td>🔴 Alto Risco</td><td>Protocolos de urgência (ECG, encaminhamento &lt;24h)</td></tr>
+    <tr><td>0,40 – 0,69</td><td>🟡 Médio Risco</td><td>Protocolos ambulatoriais (consulta &lt;30 dias)</td></tr>
+    <tr><td>&lt; 0,40</td><td>🟢 Baixo Risco</td><td>Orientações preventivas e rotina anual</td></tr>
+  </table>
+  <p>Os protocolos clínicos correspondentes são consultados em <code>protocolos_medicos.json</code>, retornando uma lista de condutas por faixa de risco.</p>
+
+  <h3>5.3. Integração do Assistente Conversacional (Fase 5)</h3>
+  <p>O endpoint <code>/chat</code> conecta-se ao <strong>OpenRouter</strong> (modelo <code>gpt-4o-mini</code>) com um <em>system prompt</em> que delimita o assistente ao domínio da cardiologia, em português, sempre recomendando avaliação médica para questões específicas. A chave de API é injetada por variável de ambiente (<code>OPENROUTER_API_KEY</code>), nunca versionada.</p>
+
+  <div class="box-note"><strong>Segurança:</strong> o CORS é habilitado para as origens dos clientes; credenciais sensíveis residem apenas nas variáveis de ambiente do Render, fora do controle de versão (<code>.gitignore</code>).</div>
+
+  <div class="footer">CardioIA Fase 7 · Relatório Técnico · Página 3 de 5</div>
+</div>
+
+<!-- ═══════════ PÁGINA 4 — FRONT, MOBILE, IOT ═══════════ -->
+<div class="page">
+  <h2>6. Front-end, Mobile e Hardware</h2>
+
+  <h3>6.1. Aplicação Web (React + Vite)</h3>
+  <p>A interface Web é uma SPA construída em <strong>React 18 + Vite</strong>, com quatro telas e navegação protegida por sessão:</p>
+  <table>
+    <tr><th>Tela</th><th>Função</th></tr>
+    <tr><td>Login</td><td>Autenticação de acesso à plataforma</td></tr>
+    <tr><td>Dashboard</td><td>Monitoramento de sinais vitais em tempo real, com indicadores coloridos por gravidade</td></tr>
+    <tr><td>Análise de Risco</td><td>Formulário das 11 variáveis clínicas e exibição visual do resultado e protocolos</td></tr>
+    <tr><td>Assistente</td><td>Interface de chat com o LLM cardiológico</td></tr>
+  </table>
+  <p>O deploy é feito na <strong>Vercel</strong>, com <code>vercel.json</code> configurando rotas SPA e <strong>CI/CD ativo</strong>: cada <code>git push</code> na branch <code>main</code> dispara um novo deploy automático.</p>
+
+  <h3>6.2. Aplicação Mobile (React Native + Expo)</h3>
+  <p>O app mobile espelha as funcionalidades da Web em <strong>React Native + Expo</strong>, com navegação em pilha. O <code>app.json</code> define o <code>android.package</code> em domínio invertido (<code>br.com.cardioai.app</code>) e o <code>eas.json</code> contém o perfil <code>preview</code> para gerar o <code>.apk</code> via <strong>Expo EAS Build</strong> (build na nuvem).</p>
+
+  <h3>6.3. Hardware em MicroPython (Fase 3 evoluída)</h3>
+  <p>A lógica de sensores da Fase 3, originalmente em <strong>C/C++ (Arduino)</strong>, foi convertida para <strong>MicroPython</strong>, permitindo execução em dispositivos mais flexíveis (ESP32 / Raspberry Pi). Principais equivalências:</p>
+  <table>
+    <tr><th>Arduino C/C++</th><th>MicroPython</th></tr>
+    <tr><td><code>#include "DHT.h"</code></td><td><code>import dht</code></td></tr>
+    <tr><td><code>dht.readTemperature()</code></td><td><code>sensor.temperature()</code></td></tr>
+    <tr><td><code>pinMode / digitalWrite</code></td><td><code>machine.Pin</code></td></tr>
+    <tr><td><code>delay(ms)</code></td><td><code>time.sleep_ms(ms)</code></td></tr>
+    <tr><td><code>Serial.println()</code></td><td><code>print()</code></td></tr>
+  </table>
+  <p>O script mantém o buffer circular de 100 leituras (resiliência offline) e adiciona feedback visual via LED para condições críticas (temperatura &gt; 38 °C ou BPM &gt; 120).</p>
+
+  <div class="footer">CardioIA Fase 7 · Relatório Técnico · Página 4 de 5</div>
+</div>
+
+<!-- ═══════════ PÁGINA 5 — DEPLOY, RESULTADOS, CONCLUSÃO ═══════════ -->
+<div class="page">
+  <h2>7. Deploy e Resultados Validados</h2>
+  <p>Toda a cadeia foi testada de ponta a ponta em produção:</p>
+  <table>
+    <tr><th>Componente</th><th>Plataforma</th><th>Validação</th></tr>
+    <tr><td>Back-end (API)</td><td>Render.com</td><td><code>/health</code> → <span class="tag">model_loaded: true</span></td></tr>
+    <tr><td>Front-end (Web)</td><td>Vercel + CI/CD</td><td>Fluxo login → dashboard → análise → chat OK</td></tr>
+    <tr><td>Mobile (.apk)</td><td>Expo EAS Build</td><td>Build gerado com perfil <code>preview</code></td></tr>
+    <tr><td>IoT</td><td>Wokwi (MicroPython)</td><td>Leitura de sensores e alerta por LED</td></tr>
+  </table>
+
+  <h3>7.1. Testes Funcionais do Modelo</h3>
+  <p>Validação real do endpoint <code>/analyze</code> em produção:</p>
+  <ul>
+    <li><strong>Paciente de alto risco</strong> (55a, fumante, PA 160/100, colesterol muito alto): probabilidade <strong>86,4%</strong> → <strong>Alto Risco</strong>, com 8 protocolos de urgência.</li>
+    <li><strong>Paciente saudável</strong> (40a, PA 120/80, sem fatores de risco): probabilidade <strong>16,7%</strong> → <strong>Baixo Risco</strong>, com orientações preventivas.</li>
+    <li><strong>Assistente LLM:</strong> respostas coerentes e contextualizadas em cardiologia, em português.</li>
+  </ul>
+
+  <h2>8. Limitações e Próximos Passos</h2>
+  <ul>
+    <li>A autenticação é simplificada (sessão local), adequada ao escopo de MVP acadêmico; uma versão de produção exigiria OAuth/JWT e persistência de usuários.</li>
+    <li>O monitoramento do dashboard usa dados simulados; a integração física sensor→backend em tempo real é o passo natural seguinte.</li>
+    <li>O free tier do Render hiberna após inatividade, gerando latência (~50s) na primeira requisição — contornável com plano pago ou <em>health-check</em> periódico.</li>
+  </ul>
+
+  <h2>9. Conclusão</h2>
+  <p>A Fase 7 cumpriu o objetivo de transformar os módulos isolados das fases anteriores em um <strong>ecossistema coeso e funcional</strong>. A plataforma demonstra, na prática, como agentes de IA — preditivos e conversacionais — podem ser aplicados à saúde digital, respeitando boas práticas de engenharia (separação de camadas, segurança de credenciais, CI/CD) e entregando uma experiência acessível tanto na Web quanto no mobile. O resultado é um MVP que materializa o "Corpo" da CardioIA, conectando o profissional de saúde aos insights da Inteligência Artificial em tempo real.</p>
+
+  <div class="footer">CardioIA Fase 7 · Relatório Técnico · Página 5 de 5 · FIAP 2026</div>
+</div>
+
+</body>
+</html>
