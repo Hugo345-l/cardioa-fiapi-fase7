@@ -13,9 +13,7 @@
 - [Hugo Mariano - RM560688](https://www.linkedin.com/in/hugomariano191628150/)
 - [Matheus Castro - RM559293](https://www.linkedin.com/in/matheus-castro-63644b224/)
 
-## 👩‍🏫 Professores
-### Tutor(a)
-- Lucas Gomes Moreira
+
 ### Coordenador(a)
 - André Godoi Chiovato
 
