@@ -16,3 +16,7 @@ mobile/ios/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local tooling
+.claude/
+**/.claude/
