@@ -1,4 +1,4 @@
-const BASE = 'https://cardioai-backend.onrender.com'
+const BASE = 'https://cardioai-backend-6ppy.onrender.com'
 
 export async function analyzeRisk(data) {
   const res = await fetch(`${BASE}/analyze`, {

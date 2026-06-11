@@ -40,6 +40,7 @@ A plataforma permite que um profissional de saúde:
 | Entregável | Link |
 |---|---|
 | 🌐 Aplicação Web (Vercel) | _a preencher após deploy_ |
+| ⚙️ API Backend (Render) | https://cardioai-backend-6ppy.onrender.com |
 | 📱 Build Mobile (.apk via EAS) | _a preencher após EAS Build_ |
 | 🔌 Simulação IoT (Wokwi MicroPython) | _a preencher_ |
 | 🎬 Vídeo Demonstrativo (até 5 min) | _a preencher_ |
